@@ -14,6 +14,9 @@
                                     <td>{{$post->title}}</td>
                                     <td>{{$post->content}}</td>
                                     <td>{{$post->userdata->name}}</td>
+                                    <td>
+                                        <a href="{{route('posts.edit', [$post->id])}}">Edit</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>

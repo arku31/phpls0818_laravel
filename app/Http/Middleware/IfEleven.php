@@ -15,9 +15,9 @@ class IfEleven
      */
     public function handle($request, Closure $next)
     {
-        if (date('d') == 11) {
+//        if (date('d') == 11) {
             return $next($request);
-        }
-        abort(403, 'Not today');
+//        }
+//        abort(403, 'Not today');
     }
 }

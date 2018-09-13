@@ -2,6 +2,8 @@
 
 namespace Tests\Unit;
 
+use App\Http\Controllers\PostController;
+use App\Post;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -14,6 +16,9 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $this->assertTrue(true);
+        $postC = new PostController();
+        $amount = $postC->getAmountOfPosts();
+
+        $this->assertTrue(Post::count() == $amount);
     }
 }
